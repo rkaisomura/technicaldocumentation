@@ -1,0 +1,150 @@
+<style>
+#body{
+  background-color: ##cfd4d1;
+}
+#header{
+  text-align: center;
+}
+#navbar{
+  position: fixed;
+  border-style: outset;
+  border-width: 1px;
+  width: 20vw;
+}
+.nav-link{
+  color: gray;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 20px;
+}
+#main-doc{
+  margin-left: 25vw;
+  margin-right: 1vw;
+}
+.main-section{
+  font-family: verdana;
+  font-size: 12px;
+  text-align: justify;
+}
+#code{
+  color: gray;
+}
+@media(max-width: 500px) {
+  body {
+    font-size: 90%;
+  }
+}
+</style>
+
+<body id="body">
+  <nav id="navbar">
+    <header id="header">
+      <h1> Python Documentation</h1><br>
+      <a class="nav-link" href="#Introduction">Introduction</a><br><br>
+      <a class="nav-link" href="#Features_and_Philosophy">Features and Philosophy</a><br><br>
+      <a class="nav-link" href="#Syntax_and_Semantics">Syntax and Semantics</a><br><br>
+      <a class="nav-link" href="#Libraries">Libraries</a><br><br>
+      <a class="nav-link" href="#Development_Enviroments">Development Enviroments</a><br><br>
+    </header>
+  </nav>
+ 
+  
+  <main id="main-doc">
+    <section class="main-section" id="Introduction">
+      <header>
+        <h2>Introduction</h2>
+      </header>
+      <p>Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python's design philosophy emphasizes code readability with its notable use of significant whitespace. Its language constructs and object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects.</p>
+      <p>Python is dynamically typed and garbage-collected. It supports multiple programming paradigms, including structured (particularly, procedural), object-oriented, and functional programming. Python is often described as a "batteries included" language due to its comprehensive standard library.</p>
+      <p>Python was conceived in the late 1980s as a successor to the ABC language. Python 2.0, released in 2000, introduced features like list comprehensions and a garbage collection system with reference counting.</p>
+      <p>Python 3.0, released in 2008, was a major revision of the language that is not completely backward-compatible, and much Python 2 code does not run unmodified on Python 3.</p>
+      <p>The Python 2 language was officially discontinued in 2020 (first planned for 2015), and "Python 2.7.18 is the last Python 2.7 release and therefore the last Python 2 release." No more security patches or other improvements will be released for it. With Python 2's end-of-life, only Python 3.5.x and later are supported.</p>
+      <p>Python interpreters are available for many operating systems. A global community of programmers develops and maintains CPython, a free and open-source reference implementation. A non-profit organization, the Python Software Foundation, manages and directs resources for Python and CPython development.</p>
+      <p>Examples Code:</p>
+      <p>1.<br><code id="code">
+        num1 = 15<br>
+        num2 = 12<br>
+        sum = num1 + num2<br>
+        print("Sum of {0} and {1} is {2}" .format(num1, num2, sum)) 
+        </code></p>
+      <p>2.<br><code id="code">
+        print('Hello, world!')
+        </code></p>
+      <p>3.<br><code id="code">
+        n = int(input('Type a number, and its factorial will be printed: '))<br>
+        if n < 0:<br>
+            raise ValueError('You must enter a non negative integer')<br>
+        fact = 1<br>
+        for i in range(2, n + 1):<br>
+            fact *= i<br>
+        print(fact)<br>
+        </code></p>
+    </section>
+    <section class="main-section" id="Features_and_Philosophy">
+      <header>
+        <h2>Features and Philosophy</h2>
+      </header>
+      <p>Python is a multi-paradigm programming language. Object-oriented programming and structured programming are fully supported, and many of its features support functional programming and aspect-oriented programming (including by metaprogramming and metaobjects (magic methods)). Many other paradigms are supported via extensions, including design by contract and logic programming.</p>
+      <p>Python uses dynamic typing and a combination of reference counting and a cycle-detecting garbage collector for memory management. It also features dynamic name resolution (late binding), which binds method and variable names during program execution.</p>
+      <p>Python's design offers some support for functional programming in the Lisp tradition. It has filter, map, and reduce functions; list comprehensions, dictionaries, sets, and generator expressions. The standard library has two modules (itertools and functools) that implement functional tools borrowed from Haskell and Standard ML.</p>
+      <p>The language's core philosophy is summarized in the document The Zen of Python (PEP 20), which includes aphorisms such as:</p>
+      <ul>
+        <li>Beautiful is better than ugly.</li>
+        <li>Explicit is better than implicit.</li>
+        <li>Simple is better than complex.</li>
+        <li>Complex is better than complicated.</li>
+        <li>Readability counts.</li>
+      </ul>
+      <p>Rather than having all of its functionality built into its core, Python was designed to be highly extensible. This compact modularity has made it particularly popular as a means of adding programmable interfaces to existing applications. Van Rossum's vision of a small core language with a large standard library and easily extensible interpreter stemmed from his frustrations with ABC, which espoused the opposite approach.</p>
+      <p>Python strives for a simpler, less-cluttered syntax and grammar while giving developers a choice in their coding methodology. In contrast to Perl's "there is more than one way to do it" motto, Python embraces a "there should be one—and preferably only one—obvious way to do it" design philosophy. Alex Martelli, a Fellow at the Python Software Foundation and Python book author, writes that "To describe something as 'clever' is not considered a compliment in the Python culture."</p>
+      <p>Python's developers strive to avoid premature optimization, and reject patches to non-critical parts of the CPython reference implementation that would offer marginal increases in speed at the cost of clarity. When speed is important, a Python programmer can move time-critical functions to extension modules written in languages such as C, or use PyPy, a just-in-time compiler. Cython is also available, which translates a Python script into C and makes direct C-level API calls into the Python interpreter.</p>
+      <p>An important goal of Python's developers is keeping it fun to use. This is reflected in the language's name—a tribute to the British comedy group Monty Python—and in occasionally playful approaches to tutorials and reference materials, such as examples that refer to spam and eggs (from a famous Monty Python sketch) instead of the standard foo and bar.</p>
+      <p>A common neologism in the Python community is pythonic, which can have a wide range of meanings related to program style. To say that code is pythonic is to say that it uses Python idioms well, that it is natural or shows fluency in the language, that it conforms with Python's minimalist philosophy and emphasis on readability. In contrast, code that is difficult to understand or reads like a rough transcription from another programming language is called unpythonic.</p>
+      <p>Users and admirers of Python, especially those considered knowledgeable or experienced, are often referred to as Pythonistas.</p>
+    </section>
+    <section class="main-section" id="Syntax_and_Semantics">
+      <header>
+        <h2>Syntax and Semantics</h2>
+      </header>
+      <p>Python is meant to be an easily readable language. Its formatting is visually uncluttered, and it often uses English keywords where other languages use punctuation. Unlike many other languages, it does not use curly brackets to delimit blocks, and semicolons after statements are optional. It has fewer syntactic exceptions and special cases than C or Pascal.</p>
+      <h3>  Indentation</h3>
+      <p>Main article: Python syntax and semantics § Indentation
+Python uses whitespace indentation, rather than curly brackets or keywords, to delimit blocks. An increase in indentation comes after certain statements; a decrease in indentation signifies the end of the current block. Thus, the program's visual structure accurately represents the program's semantic structure. This feature is sometimes termed the off-side rule, which some other languages share, but in most languages indentation doesn't have any semantic meaning.</p>
+      <h3>  Statements and control flow Python's statements include (among others):</h3>
+      <ol>
+        <li>The assignment statement (token '=', the equals sign). This operates differently than in traditional imperative programming languages, and this fundamental mechanism (including the nature of Python's version of variables) illuminates many other features of the language. Assignment in C, e.g., x = 2, translates to "typed variable name x receives a copy of numeric value 2". The (right-hand) value is copied into an allocated storage location for which the (left-hand) variable name is the symbolic address. The memory allocated to the variable is large enough (potentially quite large) for the declared type. In the simplest case of Python assignment, using the same example, x = 2, translates to "(generic) name x receives a reference to a separate, dynamically allocated object of numeric (int) type of value 2." This is termed binding the name to the object. Since the name's storage location doesn't contain the indicated value, it is improper to call it a variable. Names may be subsequently rebound at any time to objects of greatly varying types, including strings, procedures, complex objects with data and methods, etc. Successive assignments of a common value to multiple names, e.g., x = 2; y = 2; z = 2 result in allocating storage to (at most) three names and one numeric object, to which all three names are bound. Since a name is a generic reference holder it is unreasonable to associate a fixed data type with it. However at a given time a name will be bound to some object, which will have a type; thus there is dynamic typing.</li>
+        <li>The if statement, which conditionally executes a block of code, along with else and elif (a contraction of else-if).</li>
+        <li>The for statement, which iterates over an iterable object, capturing each element to a local variable for use by the attached block.</li>
+        <li>The while statement, which executes a block of code as long as its condition is true.</li>
+        <li>The try statement, which allows exceptions raised in its attached code block to be caught and handled by except clauses; it also ensures that clean-up code in a finally block will always be run regardless of how the block exits.</li>
+      </ol>
+      <code id="code">
+        num1 = 15<br>
+        num2 = 12<br>
+        sum = num1 + num2<br>
+        print("Sum of {0} and {1} is {2}" .format(num1, num2, sum)) 
+      </code>
+    </section>
+    <section class="main-section" id="Libraries">
+      <header>
+        <h2>Libraries</h2>
+      </header>
+      <p>Python's large standard library, commonly cited as one of its greatest strengths,[101] provides tools suited to many tasks. For Internet-facing applications, many standard formats and protocols such as MIME and HTTP are supported. It includes modules for creating graphical user interfaces, connecting to relational databases, generating pseudorandom numbers, arithmetic with arbitrary-precision decimals, manipulating regular expressions, and unit testing.</p>
+      <p>Some parts of the standard library are covered by specifications (for example, the Web Server Gateway Interface (WSGI) implementation wsgiref follows PEP 333[103]), but most modules are not. They are specified by their code, internal documentation, and test suites. However, because most of the standard library is cross-platform Python code, only a few modules need altering or rewriting for variant implementations.</p>
+    </section>
+    <section class="main-section" id="Development_Enviroments">
+      <header>
+        <h2>Development Enviroments</h2>
+      </header>
+      <p>Most Python implementations (including CPython) include a read–eval–print loop (REPL), permitting them to function as a command line interpreter for which the user enters statements sequentially and receives results immediately.</p>
+      <p>Other shells, including IDLE and IPython, add further abilities such as improved auto-completion, session state retention and syntax highlighting.</p>
+      <p>As well as standard desktop integrated development environments, there are Web browser-based IDEs; SageMath (intended for developing science and math-related Python programs); PythonAnywhere, a browser-based IDE and hosting environment; and Canopy IDE, a commercial Python IDE emphasizing scientific computing.</p>
+      <code id="code">
+        num1 = 15<br>
+        num2 = 12<br>
+        sum = num1 + num2<br>
+        print("Sum of {0} and {1} is {2}" .format(num1, num2, sum)) 
+      </code>
+    </section>
+  </main>
+</body>
