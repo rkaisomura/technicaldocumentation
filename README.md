@@ -1,2 +1,3 @@
-# technicaldocumentation
-Technical document page was create during the course Responsive Web Design from freeCodeCamp
+# Technical Documentation
+HTML and CSS
+Technical document page was created during the course Responsive Web Design from freeCodeCamp
